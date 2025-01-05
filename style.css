@@ -1,0 +1,158 @@
+/* Reset and universal styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffebf0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Particles.js full-screen background */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Main content */
+.content {
+    text-align: center;
+    max-width: 800px;
+    margin: 20px;
+    z-index: 1;
+}
+
+/* Title styling */
+.header {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.title {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    color: #ff69b4;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Main message */
+.message {
+    font-size: 1.3em;
+    margin: 0 20px;
+    color: #333;
+    font-weight: 500;
+}
+
+button {
+    padding: 12px 30px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3385;
+}
+
+/* Hidden by default */
+.hidden {
+    display: none;
+}
+
+.surprise {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+#secretMessage {
+    background-color: #fff0f5;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 30px auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+    width: 100%;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom confetti animation */
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Video Greeting */
+#videoMessage {
+    margin-top: 30px;
+}
+
+/* Confetti pieces */
+.confetti-piece {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #ff69b4;
+    animation: confettiFall 5s infinite linear;
+}
+
+/* Animation for confetti falling */
+@keyframes confettiFall {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
